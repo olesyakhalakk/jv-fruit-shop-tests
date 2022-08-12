@@ -13,7 +13,6 @@ public class SupplyOperationHandlerImplTest {
     private static StorageDao storageDao;
     private static OperationHandler operationHandler;
     private static FruitTransaction.Operation operation;
-    private FruitTransaction fruitTransaction;
 
     @BeforeClass
     public static void beforeClass() {
@@ -25,7 +24,7 @@ public class SupplyOperationHandlerImplTest {
 
     @Test
     public void process_productExist_ok() {
-        fruitTransaction = new FruitTransaction(operation, "apple", 150);
+        FruitTransaction fruitTransaction = new FruitTransaction(operation, "apple", 150);
         operationHandler.handle(fruitTransaction);
         Assert.assertEquals(Integer.valueOf(950), Storage.storageMap.get("apple"));
     }

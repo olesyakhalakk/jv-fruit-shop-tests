@@ -11,7 +11,6 @@ import org.junit.Test;
 import service.ReportCreatorService;
 
 public class ReportCreatorServiceImplTest {
-
     private static ReportCreatorService reportService;
     private final String reportHeader = "fruit,quantity";
     private final String newLine = "\n";
@@ -24,7 +23,6 @@ public class ReportCreatorServiceImplTest {
 
     @Test
     public void create_withNotEmptyStorage_ok() {
-        @SuppressWarnings("StringBufferReplaceableByString")
         StringBuilder expected = new StringBuilder();
         expected.append(reportHeader).append(newLine);
         expected.append("banana,").append(100).append(newLine);

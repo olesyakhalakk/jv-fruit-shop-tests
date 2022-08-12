@@ -10,7 +10,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class ProductDaoImplTest {
-    private static StorageDaoImpl storageDao;
+    private static StorageDao storageDao;
     private static Map<String, Integer> testStorage;
 
     @BeforeClass
